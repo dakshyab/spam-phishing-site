@@ -40,7 +40,7 @@ while True:
     password = ''.join(random.choice(chars) for i in range(8))
     
 
-    r=requests.post(url, allow_redirects = False, data = {'email': username,'pass': password})
+    r=requests.post(url, allow_redirects = False, data = {'Email': username,'contact': password})
     
     #printing the status of every loop and the request
     print ('sending username: %s and password: %s' % (username, password))
