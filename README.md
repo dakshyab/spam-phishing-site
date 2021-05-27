@@ -8,6 +8,6 @@ Recently i have seen a rise of fake giveaways and promotion ads on Facebook whic
 This script can be used to spam the fake site's data records with fake credentials in hopes of frustrating and slowing down the scammers.
 
 # Usage: 
--Clone the repo: git clone https://github.com/dakshyab/spam-phishing-site
+-Clone the repo: git clone https://github.com/dakshyab/spam-phishing-site.git
 -Edit the spam_phishing_site.py with required info
 -run the script using "py spam_phishing_site.py" or "python spam_phishing_site.py"

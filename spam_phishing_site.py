@@ -39,7 +39,7 @@ while True:
 
     password = ''.join(random.choice(chars) for i in range(8))
     
-
+    #change the request data as required
     r=requests.post(url, allow_redirects = False, data = {'Email': username,'contact': password})
     
     #printing the status of every loop and the request
