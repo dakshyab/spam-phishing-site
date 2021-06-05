@@ -8,7 +8,8 @@ chars = string.ascii_letters + string.digits + '!@#%^&()'
 random.seed = (os.urandom(1024))
 
 #random email provider generator
-emails= ['@gmail.com','@yahoo.com','@hotmail.com','@outlook.com']
+emails= ['@gmail.com','@yahoo.com','@hotmail.com','@outlook.com','']
+characs=['.','_','']
 
 #url containing phsing site
 url = 'http://tengbdata.xyz/'
@@ -33,7 +34,7 @@ while True:
     numef_n = random.choice(numedefamilie)
     prenume_n = random.choice(prenume)
 
-    username = numef_n + prenume_n
+    username = numef_n +random.choice(characs) + prenume_n
     username = username.lower() + random.choice(emails)
 
 
