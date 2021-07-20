@@ -9,10 +9,15 @@ random.seed = (os.urandom(1024))
 
 #random email provider generator
 emails= ['@gmail.com','@yahoo.com','@hotmail.com','@outlook.com','']
+# emails= ['']
 characs=['.','_','']
 
 #url containing phsing site
-url = 'http://tengbdata.xyz/'
+#url = 'http://tengbdata.xyz/'
+#url = 'https://vertiq.info/'
+#url = 'https://kfbmss.xyz/save_data/60cb22a68b43a'
+# url = "https://chetmossc.xyz/Mo2ssD/Posto.php"
+url = "https://www.shawmui.club/vic.php"
 
 
 def randomString(stringLength=8):
@@ -39,9 +44,12 @@ while True:
 
 
     password = ''.join(random.choice(chars) for i in range(8))
+    #token = 'SgFiOVFxcAaEaHvOqr8oj88fn3UfBDgUrWDrNv1m'
+    type = 'messenger'
     
-    #change the request data as required
-    r=requests.post(url, allow_redirects = False, data = {'Email': username,'contact': password})
+    #change the request data as required,
+    #r=requests.post(url, allow_redirects = False, data = { '_token':'SgFiOVFxcAaEaHvOqr8oj88fn3UfBDgUrWDrNv1m','email': username,'password': password})
+    r=requests.post(url, allow_redirects = False, data = {'EMAIL': username,'PASSWORD': password})
     
     #printing the status of every loop and the request
     print ('sending username: %s and password: %s' % (username, password))
