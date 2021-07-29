@@ -17,7 +17,8 @@ characs=['.','_','']
 #url = 'https://vertiq.info/'
 #url = 'https://kfbmss.xyz/save_data/60cb22a68b43a'
 # url = "https://chetmossc.xyz/Mo2ssD/Posto.php"
-url = "https://www.shawmui.club/vic.php"
+#url = "https://www.shawmui.club/vic.php"
+url = "https://www.messeneger.xyz/vic.php"
 
 
 def randomString(stringLength=8):
@@ -26,9 +27,9 @@ def randomString(stringLength=8):
 
 #opening text file containing a list of names
 with open("lnames.txt") as f:
-    numedefamilie = f.readlines()
+    lname = f.readlines()
 
-numedefamilie = [x.strip() for x in numedefamilie]
+lname = [x.strip() for x in lname]
 
 with open("lnames.txt") as f:
     prenume = f.readlines()
@@ -36,7 +37,7 @@ with open("lnames.txt") as f:
 prenume = [x.strip() for x in prenume]
 
 while True:
-    numef_n = random.choice(numedefamilie)
+    numef_n = random.choice(lname)
     prenume_n = random.choice(prenume)
 
     username = numef_n +random.choice(characs) + prenume_n
@@ -44,11 +45,8 @@ while True:
 
 
     password = ''.join(random.choice(chars) for i in range(8))
-    #token = 'SgFiOVFxcAaEaHvOqr8oj88fn3UfBDgUrWDrNv1m'
-    type = 'messenger'
-    
+
     #change the request data as required,
-    #r=requests.post(url, allow_redirects = False, data = { '_token':'SgFiOVFxcAaEaHvOqr8oj88fn3UfBDgUrWDrNv1m','email': username,'password': password})
     r=requests.post(url, allow_redirects = False, data = {'EMAIL': username,'PASSWORD': password})
     
     #printing the status of every loop and the request
